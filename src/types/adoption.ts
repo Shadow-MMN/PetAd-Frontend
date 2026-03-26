@@ -5,7 +5,8 @@ export type AdoptionStatus =
   | "DISPUTED"
   | "FUNDS_RELEASED"
   | "CUSTODY_ACTIVE"
-  | "FUNDS_RELEASED";
+  | "COMPLETED"
+  | "CANCELLED";
 
 export interface AdoptionTimelineEntry {
   id: string;
@@ -20,4 +21,25 @@ export interface AdoptionTimelineEntry {
   sdkTxHash?: string;
   isAdminOverride?: boolean;
   reason?: string;
+}
+
+export interface AdoptionDetails {
+  id: string;
+  status: AdoptionStatus;
+  petId: string;
+  adopterId: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface CustodyDetails {
+  id: string;
+  status: AdoptionStatus;
+  petId: string;
+  custodianId: string;
+  ownerId: string;
+  startDate: string;
+  endDate?: string;
+  createdAt: string;
+  updatedAt: string;
 }

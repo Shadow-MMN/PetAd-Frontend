@@ -16,6 +16,7 @@ import EditAdoptionListing from "./pages/EditAdoptionListing";
 import ListingDetailsPage from "./pages/ListingDetailsPage";
 import { SettlementSummaryPage } from "./pages/SettlementSummaryPage";
 import ModalPreview from "./pages/ModalPreview";
+import StatusPollingDemo from "./pages/StatusPollingDemo";
 
 function App() {
 
@@ -44,10 +45,11 @@ function App() {
         {/* Preview Routes */}
         <Route path="/preview-modal" element={<ModalPreview />} />
         <Route path="/adoption-completion-demo" element={<AdoptionCompletionDemo />} />
+        <Route path="/status-polling-demo" element={<StatusPollingDemo />} />
       </Route>
     </Routes>
   );
-  
+
 }
 
 export default App;
